@@ -1,0 +1,42 @@
+<div class="background-img">
+  <img src="../../../assets/images/fondo-renta.jpg">
+</div>
+
+<div class="main-container">
+
+  <div class="container forrmLanding col-sm-3">
+
+    <h1>Ayúdanos <label> con unos datos más</label></h1>
+
+    <label class="label-landing">Por que te queremos dar una oferta hecha a la medida para ti, necesitamos saber un poco mas</label>
+    <br />
+    <form #rentaForm="ngForm">
+      <div class="form-group row">
+        <label class="col-form-label ">¿Cual es tu renta liquida/ingreso mensual?</label>
+
+        <input type="text" class="form-control" placeholder="Ej: $400.000" [(ngModel)]="landing.renta" name="renta" required minlength="4" #renta="ngModel">
+
+        <div class="alert alert-danger mt-2" *ngIf="renta.invalid && renta.touched">
+          <div *ngIf="renta.errors.required">
+            El campo renta es obligatorio.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm-6">
+          <button  [disabled]="!rentaForm.form.valid" class="btn-landing" type="button" (click)="guardar()">Continuar</button>
+        </div>
+      </div>
+
+      <ul class="alert alert-danger" *ngIf="error" style="margin-bottom: 10px">
+        <li>
+          {{error}}
+        </li>
+      </ul>
+
+    </form>
+
+  </div>
+
+</div>

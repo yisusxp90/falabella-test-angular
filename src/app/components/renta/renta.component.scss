@@ -1,0 +1,71 @@
+.forrmLanding{
+  background-color: white;
+  padding: 70px 80px 60px 80px;
+  width: 30rem;
+  margin-left: 60rem;
+  margin-top: 8rem;
+  height: 30rem;
+  margin-bottom: 7rem;
+}
+
+h1 {
+  color: green;
+  font-weight: 100;
+  font-size: 1.75rem;
+  text-align: center;
+
+
+}
+label {
+  color: black;
+}
+
+.label-landing {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.btn-landing {
+  background-color: forestgreen;
+  border: none;
+  height: 60px;
+  width: 228%;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+}
+.main-container{
+  width: 100%;
+  display: flex;
+
+}
+
+.background-img{
+  position: absolute;
+  width: 100%;
+    img{
+      width: 100%;
+    }
+}
+
+@media (min-width: 400px) {
+
+  .forrmLanding {
+    margin-left: 0rem;
+    margin-top: 0rem;
+  }
+  .btn-landing{
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+
+  .forrmLanding {
+    margin-left: 60rem;
+    margin-top: 8rem;
+  }
+  .btn-landing{
+    width: 228%;
+  }
+}

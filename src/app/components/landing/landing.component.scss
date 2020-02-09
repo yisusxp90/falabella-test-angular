@@ -1,0 +1,110 @@
+
+
+.forrmLanding{
+  background: white;
+  padding: 70px 80px 60px 80px;
+  width: 35rem;
+  margin-left: 0rem;
+  margin-top: 8rem;
+}
+
+h1 {
+  color: green;
+  font-weight: 100;
+  font-size: 1.75rem;
+  text-align: center;
+
+
+}
+label {
+  color: black;
+}
+
+.label-landing {
+  text-align: left;
+  font-size: 1.1rem;
+}
+
+.btn-landing {
+  background-color: forestgreen;
+  border: none;
+  height: 60px;
+  width: 228%;
+  border-radius: 4px;
+  color: white;
+  font-weight: 500;
+}
+
+.imagenes {
+  width: 5.2rem;
+  height: 4.2rem;
+  margin-top: 2rem;
+}
+
+.img-principal {
+  display: flex;
+  margin-top: 22rem;
+  height: 9rem;
+  background-color: white;
+  border-radius: 5px;
+  width: 53rem;
+  margin-left: 3rem;
+}
+
+
+.main-container{
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+
+.h1-landing {
+  color: white;
+  font-size: 1.6rem;
+  margin-top: 80px;
+  text-align: left;
+  margin-left: 40px;
+}
+
+.h1-landing label {
+  color: white;
+  font-weight: bold;
+}
+
+@media (min-width: 400px) {
+  .img-principal{
+    display: none;
+  }
+  .forrmLanding {
+    margin-left: 2rem;
+    margin-top: 0rem;
+    padding: 70px 40px 60px 60px;
+  }
+  .btn-landing{
+    width: 100%;
+  }
+}
+
+@media (min-width: 800px) {
+  .img-principal{
+    display: flex;
+  }
+  .forrmLanding {
+    margin-left: 0rem;
+    margin-top: 8rem;
+    padding: 70px 80px 60px 80px;
+  }
+  .btn-landing{
+    width: 228%;
+  }
+}
+
+.background-img{
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+    img{
+      width: 100%;
+    }
+}
+

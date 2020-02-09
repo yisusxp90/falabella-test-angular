@@ -1,0 +1,96 @@
+<div class="background-img">
+    <img src="../../../assets/images/bg-landing.jpg">
+</div>
+
+
+<div class="main-container">
+  <div class="row col-12">
+    <div class="col-sm-6">
+      <h1 class="h1-landing">Tu Cuenta Corriente <br/><label>100% on line</label></h1>
+      <div class="img-principal">
+        <div>
+          <img class="imagenes" src="../../../assets/images/ico-cmr.png" />
+          Acumula CMR Puntos
+
+        </div>
+
+        <div>
+          <img  class="imagenes" src="../../../assets/images/opu.png" />
+          Descuentos exclusivos
+        </div>
+
+        <div>
+          <img  class="imagenes" src="../../../assets/images/visa-blue-png-2.png" />
+          Compra en todo el mundo
+        </div>
+      </div>
+    </div>
+
+    <div class="forrmLanding col-sm-4">
+
+      <h1>Ingresa <label> tus datos</label></h1>
+
+      <label class="label-landing">Solo necesitas tener tu cédula para realizar la solicitud.</label>
+      <div>
+
+        <form #landingForm="ngForm">
+          <div class="form-group row">
+            <label>Rut</label>
+
+            <input type="text" class="form-control" placeholder="Ej: 11.111.111-1" [(ngModel)]="landing.rut" name="rut" required minlength="4" #rut="ngModel">
+
+            <div class="alert alert-danger mt-2" *ngIf="rut.invalid && rut.touched">
+              <div *ngIf="rut.errors.required">
+                El campo rut es obligatorio.
+              </div>
+            </div>
+
+          </div>
+          <div class="form-group row">
+            <label>Celular</label>
+
+            <input type="text" class="form-control" placeholder="Ej: 987654321" [(ngModel)]="landing.celular" name="celular" required="" #celular="ngModel">
+            <div class="alert alert-danger mt-2" *ngIf="celular.invalid && celular.touched">
+              <div *ngIf="celular.errors.required">
+                El campo celular es obligatorio.
+              </div>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label>Correo electronico</label>
+            <input type="text" class="form-control"
+                   placeholder="Ej: correo@correo.cl"
+                   [(ngModel)]="landing.email"
+                   name="email"
+                   required
+                   #email="ngModel"
+                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+            <div class="alert alert-danger mt-2" *ngIf="email.invalid && (email.touched)">
+              <div *ngIf="email.errors.required">
+                El campo correo electronico es obligatorio.
+              </div>
+              <div *ngIf="email.errors?.pattern">
+                Formato de correo electronico invalido.
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-group row">
+            <div class="col-sm-6">
+              <button  [disabled]="!landingForm.form.valid" class="btn-landing" type="button" (click)="continuar()">Continuar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+</div>
